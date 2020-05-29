@@ -68,7 +68,7 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\AppCenter</OutputPath>
-    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;RELEASE;__APPCENTER__</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;RELEASE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
@@ -79,11 +79,14 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\AppCenter</OutputPath>
-    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;RELEASE;__APPCENTER__</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;RELEASE;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'AppCenter' ">
+    <DefineConstants>$(DefineConstants);__APPCENTER__</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
