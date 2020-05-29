@@ -19,7 +19,7 @@
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'AppCenter' ">
+  <PropertyGroup Condition=" '$(APPCENTER_BRANCH)' != '' And '$(APPCENTER_BRANCH)' != 'master' ">
     <DefineConstants>$(DefineConstants);__APPCENTER__</DefineConstants>
   </PropertyGroup>
   <ItemGroup>

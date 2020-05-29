@@ -85,9 +85,9 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'AppCenter' ">
-    <DefineConstants>$(DefineConstants);__APPCENTER__</DefineConstants>
-  </PropertyGroup>
+  <PropertyGroup Condition=" '$(APPCENTER_BRANCH )' != '' And '$(APPCENTER_BRANCH)' != 'master' ">
+	<DefineConstants>$(DefineConstants);__APPCENTER__</DefineConstants>
+</PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
